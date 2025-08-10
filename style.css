@@ -1,0 +1,41 @@
+html {
+    scroll-behavior: smooth;
+}
+
+#theme-toggle:hover {
+    background-color: #d1d5db;
+}
+
+/* Stars background - common styles */
+#stars-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 50px 50px;
+    animation: moveStars 60s linear infinite;
+    z-index: -1;
+}
+
+/* Light mode stars */
+body.light #stars-bg {
+    background-color: white;
+    background-image: radial-gradient(black 1px, transparent 1px);
+}
+
+/* Dark mode stars */
+body.dark #stars-bg {
+    background-color: black;
+    background-image: radial-gradient(white 1px, transparent 1px);
+}
+
+@keyframes moveStars {
+    from { background-position: 0 0; }
+    to { background-position: 1000px 1000px; }
+}
+
+/* Dark mode text color */
+body.dark {
+    color: white;
+}
