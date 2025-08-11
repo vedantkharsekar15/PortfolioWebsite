@@ -1,13 +1,13 @@
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: smooth;      /*It makes the page scroll smoothlyto a section when clicking ta link */
 }
 
-#theme-toggle:hover {
+#theme-toggle:hover {       /*It changes the buttons bg colour when we hover   */
     background-color: #d1d5db;
 }
 
 /* Stars background - common styles */
-#stars-bg {
+#stars-bg {                         /* Google search idea of moving something in the bg  */
     position: fixed;
     top: 0;
     left: 0;
@@ -20,22 +20,22 @@ html {
 
 /* Light mode stars */
 body.light #stars-bg {
-    background-color: white;
+    background-color: white;          /* When body is light stars will be black  */
     background-image: radial-gradient(black 1px, transparent 1px);
 }
 
 /* Dark mode stars */
 body.dark #stars-bg {
-    background-color: black;
+    background-color: black;    /* When body is dark stars will be white */
     background-image: radial-gradient(white 1px, transparent 1px);
 }
 
-@keyframes moveStars {
+@keyframes moveStars {              /*move infinite stars from top left to oppsite diagonally*/
     from { background-position: 0 0; }
     to { background-position: 1000px 1000px; }
 }
 
 /* Dark mode text color */
 body.dark {
-    color: white;
+    color: white;           /*when the body will be dark all txt will be white and works together with JS theme toggle button*/
 }
